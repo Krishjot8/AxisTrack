@@ -1,0 +1,6 @@
+@AxisTrack_HostAddress = http://localhost:5290
+
+GET {{AxisTrack_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
