@@ -8,7 +8,7 @@
         Task<IEnumerable<T>> GetAllAsync();
 
 
-        Task<T> AddAsync (T item);
+        Task<T> AddAsync(T item);
 
 
         Task<T> UpdateAsync (T item);

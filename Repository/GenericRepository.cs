@@ -1,5 +1,6 @@
 ﻿
 using AxisTrack.Data;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 
 namespace AxisTrack.Repository
@@ -10,39 +11,54 @@ namespace AxisTrack.Repository
 
         private readonly StoreContext _storeContext;
 
-        private readonly DbSet<T> _dbSet;
+      
 
-        public GenericRepository(StoreContext storeContext, DbSet<T> dbSet)
+        public GenericRepository(StoreContext storeContext)
         {
             _storeContext = storeContext;
-            _dbSet = dbSet;
+           
         }
 
 
 
-        Task<T> IGenericRepository<T>.AddAsync(T item)
+        async Task<T> IGenericRepository<T>.AddAsync(T item)
         {
-            throw new NotImplementedException();//a
+           await _storeContext.Set<T>().AddAsync(item);
+
+            await _storeContext.SaveChangesAsync();
+            return item;
         }
 
-        Task<bool> IGenericRepository<T>.DeleteAsync(int id)
+        async Task<bool> IGenericRepository<T>.DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+           var entity = await _storeContext.Set<T>().FindAsync(id);
+
+
+            if (entity == null) return false;
+                
+            _storeContext.Set<T>().Remove(entity);
+
+            return true;
+            
         }
 
-        Task<IEnumerable<T>> IGenericRepository<T>.GetAllAsync()
+        async Task<IEnumerable<T>> IGenericRepository<T>.GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _storeContext.Set<T>().AsNoTracking().ToListAsync();
         }
 
-        Task<T?> IGenericRepository<T>.GetByIdAsync(int id)
+        async Task<T?> IGenericRepository<T>.GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+           return await _storeContext.Set<T>().FindAsync(id);
         }
 
-        Task<T> IGenericRepository<T>.UpdateAsync(T item)
+        async Task<T> IGenericRepository<T>.UpdateAsync(T item)
         {
-            throw new NotImplementedException();
+
+            _storeContext?.Set<T>().Update(item);
+            await _storeContext.SaveChangesAsync();
+            return item;
+        
         }
     }
 

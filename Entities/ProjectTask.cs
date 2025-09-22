@@ -8,7 +8,10 @@
 
         public string? Description { get; set; }
 
-        public string? Category { get; set; }
+
+        public int? CategoryId { get; set; }
+
+        public Category? Category { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
@@ -16,7 +19,6 @@
 
 
         public TaskStatus Status { get; set; }
-
 
 
         public int ProjectId { get; set; }
