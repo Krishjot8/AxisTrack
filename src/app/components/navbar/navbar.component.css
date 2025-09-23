@@ -1,0 +1,28 @@
+/* Remove default browser margins/padding */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Make the sidebar span the full height */
+.sidebar {
+  background-color: black;
+  width: 150px;          /* fixed width */
+  height: 100vh;         /* 100% viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* optional: space between nav and logo */
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  color: aqua;
+  list-style-type: none;
+  padding: 10px;
+  cursor: pointer;
+}
