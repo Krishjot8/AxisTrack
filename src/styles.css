@@ -9,3 +9,10 @@ body, html {
   width: 100%;
   overflow-x: hidden;
 }
+
+.menu-button{
+ background-color:rgb(11, 33, 83) !important; /* your desired blue */
+  border-color:rgb(11, 33, 83) !important;
+  color: white !important;
+
+}

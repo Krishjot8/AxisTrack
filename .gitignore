@@ -1,1 +1,41 @@
-node_modules
+# Node modules
+node_modules/
+
+# Build output
+dist/
+out-tsc/
+build/
+.bundle/
+.cache/
+
+# Angular CLI
+.angular/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE files
+.vscode/
+.idea/
+
+# Optional: Babel/Webpack compiled files
+webpack/
+babel/
+# Angular cache
+.angular/cache/
+
+.angular/cache/15.2.11/angular-webpack/5b76661670f871351e760d71ea7ee4f8f6355e23/0.pack
+.angular/cache/15.2.11/angular-webpack/5b76661670f871351e760d71ea7ee4f8f6355e23/1.pack
+.angular/cache/15.2.11/angular-webpack/5b76661670f871351e760d71ea7ee4f8f6355e23/2.pack
+.angular/cache/15.2.11/angular-webpack/5b76661670f871351e760d71ea7ee4f8f6355e23/3.pack
+.angular/cache/15.2.11/angular-webpack/5b76661670f871351e760d71ea7ee4f8f6355e23/4.pack
+.angular/cache/15.2.11/angular-webpack/5b76661670f871351e760d71ea7ee4f8f6355e23/5.pack
+.angular/cache/15.2.11/angular-webpack/5b76661670f871351e760d71ea7ee4f8f6355e23/6.pack
+.angular/cache/15.2.11/angular-webpack/5b76661670f871351e760d71ea7ee4f8f6355e23/7.pack
+.angular/cache/15.2.11/angular-webpack/5b76661670f871351e760d71ea7ee4f8f6355e23/8.pack
+.angular/cache/15.2.11/angular-webpack/5b76661670f871351e760d71ea7ee4f8f6355e23/9.pack
+.angular/cache/15.2.11/angular-webpack/5b76661670f871351e760d71ea7ee4f8f6355e23/11.pack
+.angular/cache/15.2.11/angular-webpack/5b76661670f871351e760d71ea7ee4f8f6355e23/index.pack
+.angular/cache/15.2.11/angular-webpack/5b76661670f871351e760d71ea7ee4f8f6355e23/index.pack.old

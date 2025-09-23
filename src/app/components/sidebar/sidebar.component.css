@@ -1,0 +1,38 @@
+
+/* Make the sidebar span the full height */
+.sidebar {
+background-color: rgb(11, 33, 83);
+  width: 100px;          /* fixed width */
+  height: 100vh;         /* 100% viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* optional: space between nav and logo */
+
+}
+
+.logo{
+
+  text-align: center;
+}
+
+.logo img{
+
+
+margin-bottom: 10px;
+ width:25px;
+}
+
+
+.sidebar-item{
+
+  text-align: center;
+  color: white;
+
+}
+.sidebar-item i{
+
+  text-align: center;
+  color: white;
+scale: 1.2;
+cursor: pointer;
+}
