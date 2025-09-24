@@ -1,0 +1,16 @@
+<div class="sidebar">
+  <!-- Toggle Button -->
+  <p-button styleClass="menu-button" icon="pi pi-bars"(onClick)="showSidebar = !showSidebar">
+  </p-button>
+
+  <!-- Navigation Buttons -->
+  <p-button label="Dashboard" icon="pi pi-home" styleClass="menu-item" routerLink="/dashboard"></p-button>
+  <p-button label="Projects" icon="pi pi-briefcase" styleClass="menu-item" routerLink="/projects"></p-button>
+  <p-button label="Categories" icon="pi pi-tags" styleClass="menu-item" routerLink="/categories"></p-button>
+  <p-button label="Reports" icon="pi pi-chart-bar" styleClass="menu-item" routerLink="/reports"></p-button>
+  <p-button label="Settings" icon="pi pi-cog" styleClass="menu-item" routerLink="/settings"></p-button>
+
+  <div class="logo">
+    <img src="../../../assets/images/axis-epc-navbar-logo.png" alt="" width="35px">
+  </div>
+</div>

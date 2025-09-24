@@ -1,7 +1,18 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+// main.ts
+import { bootstrapApplication } from '@angular/platform-browser';
+import { provideRouter } from '@angular/router';
+import { providePrimeNG } from 'primeng/config';
+import Aura from '@primeuix/themes/aura'; // choose any preset
+import { AppComponent } from './app/app.component';
+import { routes } from './app/app.routes';
 
-import { AppModule } from './app/app.module';
-
-
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideRouter(routes),
+    providePrimeNG({
+      theme: {
+        preset: Aura,
+      },
+    }),
+  ],
+}).catch((err) => console.error(err));
